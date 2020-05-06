@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:wght@400;700&display=swap');
+
+:root {
+  /* COLORS */
+  --primary-color: #FF5A5F;
+  --primary-color-light: #FF7479;
+  --primary-color-dark: #E64146;
+  --secondary-color: #484848;
+  --secondary-color-light: #959595;
+  --secondary-color-dark: #2F2F2F;
+  --font-color: #484848;
+  --font-color-light: #959595;
+  --font-color-dark: #2F2F2F;
+  --gradient-horizontal: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  --gradient-vertical: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+
+  /* FONTES */
+  --font-1: 'Montserrat',
+    sans-serif;
+  --font-2: 'Nunito',
+    sans-serif;
+}
+
+body {
+  font-family: var(--font-2);
+}
