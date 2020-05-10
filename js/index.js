@@ -18,11 +18,11 @@ class App {
     let small = document.createElement("small");
     small.innerHTML = "/NOITE";
     let pPrice = document.createElement("p");
-    pPrice.innerHTML = data.price;
+    pPrice.innerHTML = `R$ ${data.price.toFixed(2).replace(".", ",")}`;
     pPrice.classList.add("room__price");
-    let pTotal = document.createElement("p");
-    pTotal.classList.add("room__total");
-    pTotal.innerHTML = "Total de R$ 866,00";
+    // let pTotal = document.createElement("p");
+    // pTotal.classList.add("room__total");
+    // pTotal.innerHTML = "Total de R$ 866,00";
     let cardImg = document.createElement("div");
     cardImg.classList.add("room__image");
     cardImg.style.backgroundImage = `url(${data.photo})`;
@@ -35,7 +35,7 @@ class App {
     cardText.appendChild(h4);
     cardText.appendChild(pType);
     cardText.appendChild(pPrice);
-    cardText.appendChild(pTotal);
+    // cardText.appendChild(pTotal);
     card.appendChild(cardImg);
     card.appendChild(cardText);
 

@@ -120,6 +120,7 @@ body {
 }
 
 .card__room .room__text .room__type {
+  text-transform: uppercase;
   font-family: var(--font-2);
   font-size: 0.75rem;
 }
