@@ -8,19 +8,229 @@
   --secondary-color: #484848;
   --secondary-color-light: #959595;
   --secondary-color-dark: #2F2F2F;
-  --font-color: #484848;
+  --font-color: #6e6e6e;
   --font-color-light: #959595;
   --font-color-dark: #2F2F2F;
   --gradient-horizontal: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
   --gradient-vertical: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 
+  --shadow: 3px 3px 10px rgba(0, 0, 0, 0.18);
   /* FONTES */
   --font-1: 'Montserrat',
     sans-serif;
   --font-2: 'Nunito',
     sans-serif;
+
+  --border-radius: 0.5rem;
+  --border: 0.5px solid rgba(72, 72, 72, 0.2)
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: var(--font-2);
+  color: var(--font-color);
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* PAGINA */
+.content .content__page {
+  flex: 6;
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+/* Navbar */
+.content__page .content__page__navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.content__page__navbar ul {
+  display: flex;
+}
+
+.content__page__navbar ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 1.25rem;
+}
+
+.content__page__navbar ul li:last-child {
+  margin-right: 0;
+}
+
+/* Grid */
+.content__page .content__page__grid {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 73px);
+}
+
+.grid__rooms {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  overflow-y: auto;
+}
+
+.card__room {
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  border: var(--border);
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.card__room .room__image {
+  width: 100%;
+  max-width: 180px;
+  height: 130px;
+  background-image: url("https://a0.muscache.com/im/pictures/e6c4b347-49c7-4840-8c00-df36a2a273da.jpg?aki_policy=x_large");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.card__room .room__text {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__room .room__text h4 {
+  font-family: var(--font-1);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card__room .room__text .room__type {
+  font-family: var(--font-2);
+  font-size: 0.75rem;
+}
+
+.card__room .room__text .room__price {
+  font-family: var(--font-2);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: 0.25rem;
+}
+
+.card__room .room__text .room__price small {
+  font-family: var(--font-2);
+  font-size: 0.75rem;
+}
+
+.card__room .room__text .room__total {
+  font-family: var(--font-2);
+  font-size: 0.75rem;
+}
+
+/* MAPA */
+.content .content__map {
+  flex: 4;
+  background-image: url("../img/mapa.png");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* FOOTER PAGE */
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 0.5rem 2rem;
+}
+
+.footer .footer__main {
+  display: flex;
+}
+
+.footer .footer__main .footer__main__logo {
+  flex: 7
+}
+
+.footer .footer__main .footer__main__menu {
+  flex: 2
+}
+
+.footer .footer__main .footer__main__menu nav ul li {
+  margin: 0.5rem 0;
+  font-family: var(--font-2);
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.footer .footer__main .footer__main__media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer__main .footer__main__media img {
+  width: 2rem;
+  padding: 0.2rem;
+}
+
+.footer .footer__secondary {
+  font-size: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color-light);
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #757272;
+}
+
+/* BOTÃO */
+.btn {
+  background-color: var(--primary-color);
+  font-family: var(--font-1);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
 }

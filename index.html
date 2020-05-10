@@ -9,18 +9,42 @@
   <body>
     <main class="content">
       <section class="content__page">
-        <nav class="content__page__navbar"></nav>
-        <article class="content__page__filter"></article>
+        <nav class="content__page__navbar">
+          <img
+            class="logo__navbar"
+            src="img/logotipo.svg"
+            alt="Logo do Airbnb"
+          />
+          <ul>
+            <li>Hospede em sua casa</li>
+            <li>Hospede uma experiência</li>
+            <li>Ajuda</li>
+            <li><button class="btn">Cadastre-se</button></li>
+          </ul>
+        </nav>
+        <!-- <article class="content__page__filter"></article> -->
         <article class="content__page__grid">
-          <section class="orderBy"></section>
-          <section class="grid__rooms"></section>
+          <!-- <section class="orderBy"></section> -->
+          <section class="grid__rooms">
+            <article class="card__room">
+              <div class="room__image"></div>
+              <div class="room__text">
+                <h4>Apartment in Son Parc, wonderful views</h4>
+                <p class="room__type">APARTAMENTO</p>
+                <p class="room__price">R$ 433,00<small>/NOITE</small></p>
+                <p class="room__total">Total de R$ 866,00</p>
+              </div>
+            </article>
+          </section>
         </article>
       </section>
       <aside class="content__map"></aside>
     </main>
     <footer class="footer">
       <section class="footer__main">
-        <article class="footer__main__logo"></article>
+        <article class="footer__main__logo">
+          <img src="img/logotipo-white.svg" alt="logo airbnb branco" />
+        </article>
         <article class="footer__main__menu">
           <nav>
             <ul>
