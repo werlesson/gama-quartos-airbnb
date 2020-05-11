@@ -235,3 +235,13 @@ body {
 .btn:hover {
   background-color: var(--primary-color-dark);
 }
+
+@media only screen and (max-width: 991px) {
+  .content .content__map {
+    display: none;
+  }
+
+  .content__page__navbar ul {
+    display: none;
+  }
+}
